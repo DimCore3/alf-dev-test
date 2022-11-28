@@ -10,18 +10,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
 import counterVue from './Counter.vue'
 
-export default defineComponent({
-    components: {
-        counterVue
-    },
-    setup () {
-
-
-        return {}
-    }
+export default ({
+    components: { counterVue },
 })
 </script>
 
@@ -35,7 +27,6 @@ export default defineComponent({
         justify-content: flex-start;
     }
 }
-
     .cart-and-favorite {
         display: flex;
         align-items: center;

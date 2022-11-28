@@ -1,7 +1,7 @@
 <template>
     <div>
         Page
-        <ContentVue/>
+        <ContentVue :productData='productData'/>
     </div>
 </template>
 
@@ -13,11 +13,11 @@ export default defineComponent({
     components: {
         ContentVue,
     },
-    setup () {
-        
 
-        return {}
-    }
+    props: {
+        productData: Object
+    },
+
 })
 </script>
 

@@ -5,11 +5,31 @@
   margin: 0px;
 }
 
-p {
+p, select, button, h1, .text-regular-small {
   font-family: 'Open Sans';
   font-style: normal;
+  letter-spacing: 0.04em;
+}
+
+.text-regular-small {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+p, select, button {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0.04em;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.regular-border {
+  color: black;
+  border: 1px #333333 solid;
 }

@@ -1,23 +1,22 @@
 <template>
     <div>
         Content
-        <Product/>
+        <Product :productData='productData'/>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
 import Product from './CurrentProduct/Product.vue'
 
-export default defineComponent({
+export default({
     components: {
         Product,
     },
-    setup () {
-        
 
-        return {}
-    }
+    props: {
+        productData: Object
+    },
+
 })
 </script>
 

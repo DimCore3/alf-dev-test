@@ -1,21 +1,19 @@
 <template>
     <div>
         Product
-        <ProductDescriptionVue/>
+        <ProductDescriptionVue :productData='productData'/>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
 import ProductDescriptionVue from './ProductDescription/ProductDescription.vue';
 
-export default defineComponent({
+export default ({
     components: {ProductDescriptionVue},
-    setup () {
-        
 
-        return {}
-    }
+    props: {
+        productData: Object
+    },
 })
 </script>
 
