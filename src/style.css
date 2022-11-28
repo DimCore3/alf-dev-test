@@ -1,0 +1,15 @@
+* {
+  width: auto;
+  height: auto;
+  border: 0px;
+  margin: 0px;
+}
+
+p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+}
