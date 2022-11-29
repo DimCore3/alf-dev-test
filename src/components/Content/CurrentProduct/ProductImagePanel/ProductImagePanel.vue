@@ -18,7 +18,6 @@
 
 <script lang="ts">
 import MiniatureImageVue from './MiniatureImage/MiniatureImage.vue';
-
 export default({
     components: {
         MiniatureImageVue
@@ -53,5 +52,4 @@ export default({
         background-size: cover;
         background-position: center;
     }
-
 </style>

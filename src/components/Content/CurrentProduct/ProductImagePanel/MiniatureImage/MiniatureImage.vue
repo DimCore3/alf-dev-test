@@ -1,16 +1,14 @@
 <template>
     <div 
         @click="activate()" 
-        class='mini-img-block' :class="{'img-is-active':isActive}"
+        class='mini-img-block' :class="{'img-is-not-active':!isActive}"
         :style="{ 'background-image' : 'url(\'' + picture + '\')' }"
     >
     </div>
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue'
-
-export default defineComponent({
+export default ({
 
     props:{
         index: Number,
@@ -18,25 +16,11 @@ export default defineComponent({
         picture: String,
     },
 
-    setup () {
-        return {}
-    },
-
-    mounted() {
-        console.log(this.picture)
-    },
-
     methods: {
         activate() {
-            console.log(this.isActive)
-
             this.$emit('update:UpdateIndex', this.index)
-            console.log('нажал изображение')
-            console.log(this.index)
-            console.log(this.isActive)
         },
     }
-
 })
 </script>
 
@@ -52,8 +36,8 @@ export default defineComponent({
         filter: brightness(80%)
     }
 
-    .img-is-active {
-        filter: brightness(70%)
+    .img-is-not-active {
+        filter: brightness(50%)
     }
 
     img {
@@ -61,5 +45,4 @@ export default defineComponent({
             height: 100%;
             position: static;
     }
-    
 </style>

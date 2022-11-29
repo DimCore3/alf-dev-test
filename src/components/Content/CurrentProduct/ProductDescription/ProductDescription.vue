@@ -1,8 +1,8 @@
 <template>
     <div class="product-description">
         <h1>{{productData.productName}}</h1>
-        <div class="text-regular-small">Арт.{{productData.articleCode}}</div>
-        <ReviewAndGradeVue/>
+        <div class="text-regular-small article-number">Арт.{{productData.articleCode}}</div>
+        <ReviewAndGradeVue :commentsCountRate='productData.commentsCountRate'/>
         <PriceAndDiscountsVue/>
         <div class="current-product-description">
             <ChooseSizeVue/>
@@ -57,5 +57,8 @@ h1 {
     margin: 2rem;
     line-height: 3rem;
     padding: 0.5rem;
+}
+.article-number {
+    margin-bottom: 1rem;
 }
 </style>
