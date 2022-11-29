@@ -22,5 +22,6 @@ export default defineComponent({
         height: 44px;
         appearance: none;
         background: url(/src/assets/corner.png) no-repeat right;
+        padding: 0 0.5rem;
     }
 </style>

@@ -6,7 +6,10 @@ export default interface ProductDataInterface {
       oldPrice: number,
       discounts: number[],
     },
-    commentsCountRate: number,
+    rating: {
+      commentsCount: number,
+      productRate: number,
+    }
     allImgSrc:string[],
     allStyleImgSrc: string[],
   }

@@ -1,14 +1,20 @@
 <template>
     <div class='review-grade-line'>
         <p> Отзывы </p>
-        <div class="review-stars" v-for="rateStar of maxRating">
-            {{rating}}
-            <p>{{rating > maxRating}}</p>
-            {{rateStar}}
-            <img src={{}} alt="">
+        <div class="review-stars">
+            <div class="star-vote" v-for="rateStar of maxRating">
+                <img v-if="rating.productRate >= rateStar" src="src/assets/filledStar.png">
+                <img v-else src="src/assets/unfiiledStar.png">
+            </div>
+            <p>
+                {{rating?.commentsCount}} отзывов
+            </p>
+            <img 
+                class="corner-button-for-comments" 
+                src="/src/assets/corner.png"
+                @click="modalInfoBox"    
+            >
         </div>
-        <p>{{commentsCountRate}} отзывов</p>
-        <img src="/src/assets/corner.png" alt="">
     </div>
 </template>
 
@@ -16,40 +22,60 @@
 
 export default ({
     props: {
-        commentsCountRate: Number,
+        rating:{
+            type:Object,
+            default: {
+                productRate: {
+                    type: Number,
+                    default: 1,
+                },
+                commentsCount: {
+                    type: Number,
+                    default:0,
+                }
+            }
+        } 
     },
-    
     data() {
         return {
-            rating: 0,
+            rate: 0,
             maxRating: 5,
         }
     },
     
     beforeMount() {
-        this.rating = this.checkRating();
+        console.log(this.rating.commentsCount)
     },
 
     methods: {
-        checkRating() {
-            let rate:number = this.rating;
-            rate = (this.commentsCountRate ?? 0) / rate; 
-            if (rate - Math.floor(rate) > 0.5) {
-                rate = Math.round(rate)
-            } else { 
-                rate = Math.floor(rate) 
-            }
-            return rate;
+        modalInfoBox() {
+            alert('Тут будет модальное окно или страница')
         }
     }
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .review-grade-line {
         display: flex;
+        line-height: 1rem;
+        flex-wrap: nowrap;
         align-items: baseline;
         gap: 0.5rem;
-        line-height: 2rem;
+
+        .review-stars {
+            display: flex;
+            flex-direction: row;
+            height: 0.7rem;
+            align-items: center;
+            gap: 0.2rem;
+        }
+        .corner-button-for-comments {
+            transform: rotate(-90deg);
+        }
+        .corner-button-for-comments:hover {
+            background-color: rgb(177, 177, 177);
+            cursor: pointer;
+        }
     }
 </style>

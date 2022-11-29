@@ -5,14 +5,32 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+export default({
+    props: {
+        discounts: Array,
+        oldPrice: Number,
+    },
 
-export default defineComponent({
-    setup () {
-        
+    data() {
+        let newPrice:number = 0;
+        return {
+            newPrice:Number
+        }
+    },
 
-        return {}
-    }
+    methods:{
+        getCoastWithDiscounts (){
+            try {
+                this.newPrice = this.oldPrice;
+                for (let amount of this.oldPrice) {
+                    this.newPrice = Numbrer(this.newPrice) * (amount / 100)
+                }
+            } catch (error) {
+                alert('Error: ', error[0])
+                
+            },
+        },
+    },
 })
 </script>
 

@@ -11,12 +11,11 @@ $full-hight-column: $full-width-column * 1.25;
 @media screen and (min-width: 1390px) {
   .full-product-info {
     display: flex;
-    width: auto;
     justify-content: center;
     height: max-content;
   }
   .full-product-img {
-    width: $full-width-column;
+    width: 700px;
     height: $full-hight-column;
   }
   .counter-cart-favorite {
@@ -25,8 +24,7 @@ $full-hight-column: $full-width-column * 1.25;
     align-items: center;
   }
   .product-description {
-    min-width: $full-width-column;
-    height: $full-hight-column;
+    width: 700px;    
   }
 }
 

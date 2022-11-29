@@ -2,7 +2,7 @@
     <div class="product-description">
         <h1>{{productData.productName}}</h1>
         <div class="text-regular-small article-number">Арт.{{productData.articleCode}}</div>
-        <ReviewAndGradeVue :commentsCountRate='productData.commentsCountRate'/>
+        <ReviewAndGradeVue :rating='productData.rating'/>
         <PriceAndDiscountsVue/>
         <div class="current-product-description">
             <ChooseSizeVue/>
@@ -41,7 +41,7 @@ export default defineComponent({
         }
     },
     mounted() {
-        console.log(this.productData)
+        console.log(this.productData.rating)
     }
 })
 </script>
@@ -49,13 +49,15 @@ export default defineComponent({
 <style scoped>
 h1 {
     color: #333333;
+    line-height: 20px;
+    margin-bottom: 0.5rem;
 }
 .text-regular-small {
     color: #828282;
 }
 .product-description {
     margin: 2rem;
-    line-height: 3rem;
+    line-height: 4rem;
     padding: 0.5rem;
 }
 .article-number {

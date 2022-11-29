@@ -31,7 +31,10 @@ export default defineComponent({
           20, 36
         ],
       },
-      commentsCountRate: 14,
+      rating: {
+        commentsCount: 14,
+        productRate: 4,
+      },
       allImgSrc: [
         'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/139867.png?raw=true',
         'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/1229678.png?raw=true',
