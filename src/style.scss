@@ -5,32 +5,19 @@
   margin: 0px;
 }
 
+$full-width-column: 684px;
+$full-hight-column: $full-width-column * 1.25;
 
 @media screen and (min-width: 1390px) {
   .full-product-info {
-      display: flex;
-      flex-direction: row;
-  }
-  .full-product-img {
-    width: 686px;
-    height: 923px;
-    background-color: aqua;
-  }
-  .counter-cart-favorite {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-}
-@media screen and (min-width:1100px) and (max-width: 1389px) {
-  .full-product-info {
-      display: flex;
-      flex-direction: row;
+    width: auto;
+    justify-content: center;
+    height: max-content;
   }
   .full-product-img {
-    width: 50%;
-    height: 923px;
-    background-color: aqua;
+    width: $full-width-column;
+    height: $full-hight-column;
   }
   .counter-cart-favorite {
     display: flex;
@@ -38,40 +25,60 @@
     align-items: center;
   }
   .product-description {
-    width: 40%;
+    min-width: $full-width-column;
+    height: $full-hight-column;
   }
 }
-@media screen and (min-width: 800px) and (max-width:1099px) {
+
+@media screen and (min-width: 900px) and (max-width:1389px) {
   .full-product-info {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    width: auto;
   }
   .full-product-img {
-    width: 100%;
-    height: 923px;
-    background-color: aqua;
+    min-width: 60%;
+    height: $full-hight-column * 0.8;
   }
   .product-description {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     width: 40%;
-    height: 500px;
+    height: $full-hight-column * 0.8;
   }
 }
-@media screen and (max-width: 799px) {
+
+@media screen and (min-width: 700px) and (max-width:899px) {
+  .full-product-info {
+    display: flex;
+    flex-direction: row;
+  }
+  .full-product-img {
+    min-width: $full-width-column * 0.7;
+    width: 70%;
+    height: $full-hight-column * 0.8;
+  }
+  .product-description {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 60rem
+  }
+}
+
+@media screen and (max-width: 699px) {
   .counter-cart-favorite {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-      width: 100%;
   }
   .full-product-img {
-    min-width: 375px;
-    width: 96%;
-    min-height: 505px;
+    min-width: 28rem;
+    height: 100%;
     background-color: aqua;
+  }
+  .product-description {
+    width: 100%;
   }
 }
 

@@ -36,12 +36,8 @@ export default ({
         align-items: baseline;
         text-align: center;
         flex-direction: row;
-        justify-content: space-around;
         width: 145px;
         height: 44px;
-        left: 0px;
-        top: 0px;
-
         p {
             color: #333333;
             width: 44px;
@@ -50,8 +46,6 @@ export default ({
         button {
             width: 44px;
             height: 44px;
-            left: 20px;
-            top: 12px;
         }
         button:hover {
             background-color:rgba(33,33,33,0.1);

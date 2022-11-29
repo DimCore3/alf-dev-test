@@ -18,15 +18,17 @@ export default ({
 </script>
 
 <style scoped lang="scss">
-
+    .counter-cart-favorite {
+        height: 3rem;
+        gap: 0.5rem;
+        margin: 1rem 0rem;
+    }
     .cart-and-favorite {
         display: flex;
         align-items: center;
-        flex-direction: row;
         width: 408px;
         height: 91px;
-        left: 20px;
-        top: 112px;
-        gap: 4px;
+        gap: inherit;
+        height: 4rem;
     }
 </style>

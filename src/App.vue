@@ -33,11 +33,11 @@ export default defineComponent({
       },
       commentsCountRate: 14,
       allImgSrc: [
-        './assets/14896420.png',
-        '',
-        '',
-        '',
-        '',
+        'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/139867.png?raw=true',
+        'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/1229678.png?raw=true',
+        'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/13986.png?raw=true',
+        'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/1229678.png?raw=true',
+        'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/13986.png?raw=true',
       ],
       allStyleImgSrc: [
         '',

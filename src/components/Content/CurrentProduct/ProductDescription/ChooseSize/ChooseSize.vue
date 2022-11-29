@@ -17,11 +17,10 @@ export default defineComponent({
 
 <style scoped>
     .choose-size {
-        width: 315px;
+        max-width: 315px;
+        width: 60%;
         height: 44px;
-        padding: 4px 8px;
-        gap: 10px;
         appearance: none;
-        background: url('../../../../../assets/corner.png') no-repeat right;
+        background: url(/src/assets/corner.png) no-repeat right;
     }
 </style>

@@ -54,6 +54,8 @@ h1 {
     color: #828282;
 }
 .product-description {
-    margin: 20px;
+    margin: 2rem;
+    line-height: 3rem;
+    padding: 0.5rem;
 }
 </style>

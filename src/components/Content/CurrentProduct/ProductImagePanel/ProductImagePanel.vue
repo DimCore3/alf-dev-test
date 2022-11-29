@@ -1,9 +1,18 @@
 <template>
-    <div class="full-product-img">
+    <div  
+        class="full-product-img"  
+        :style="{ 'background-image' : 'url(\''+ productData?.allImgSrc[imgIndexActive] + '\')'}"
+    >
         <div class="img-control-panel">
-            <MiniatureImageVue v-for='picture of productData?.allImgSrc' :picture='picture'/>
+            <MiniatureImageVue 
+                v-for='(picture,index) of productData?.allImgSrc' 
+                :picture='picture' 
+                :index='index' 
+                :key="'miniImg_' + index" 
+                :isActive="index === imgIndexActive"
+                v-model:UpdateIndex="imgIndexActive"
+            />
         </div>
-        <img src="" alt="">
     </div>
 </template>
 
@@ -23,6 +32,7 @@ export default({
 
     data() {
         return {
+            imgIndexActive: 0,
         }
     },
 
@@ -35,6 +45,13 @@ export default({
         gap: 7px;
         display: flex;
         flex-direction: column;
+    }
+
+    .full-product-img {
+        background-clip: border-box;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
 </style>
