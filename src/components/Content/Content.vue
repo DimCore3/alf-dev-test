@@ -1,6 +1,5 @@
 <template>
     <div>
-        Content
         <Product :productData='productData'/>
     </div>
 </template>

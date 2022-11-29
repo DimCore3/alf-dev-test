@@ -19,14 +19,6 @@ export default ({
 
 <style scoped lang="scss">
 
-@media screen and (min-width: 400px) {
-    .counter-cart-favorite {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-    }
-}
     .cart-and-favorite {
         display: flex;
         align-items: center;

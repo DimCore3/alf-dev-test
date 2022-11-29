@@ -7,5 +7,6 @@ export default interface ProductDataInterface {
       discounts: number[],
     },
     commentsCountRate: number,
+    allImgSrc:string[],
     allStyleImgSrc: string[],
   }

@@ -1,19 +1,28 @@
 <template>
-    <div>
-        Product
+    <div class="full-product-info">
+        <ProductImagePanelVue :productData='productData'/>
         <ProductDescriptionVue :productData='productData'/>
     </div>
 </template>
 
 <script lang="ts">
+import ProductImagePanelVue from './ProductImagePanel/ProductImagePanel.vue';
 import ProductDescriptionVue from './ProductDescription/ProductDescription.vue';
 
 export default ({
-    components: {ProductDescriptionVue},
+    components: {
+        ProductImagePanelVue,
+        ProductDescriptionVue
+    },
 
     props: {
         productData: Object
     },
+
+    mounted() {
+        console.log(this.productData)
+    }
+
 })
 </script>
 

@@ -1,6 +1,5 @@
 <template>
   <div>
-    App
     <PageVue :productData='productData' />
   </div>
 </template>
@@ -33,6 +32,13 @@ export default defineComponent({
         ],
       },
       commentsCountRate: 14,
+      allImgSrc: [
+        './assets/14896420.png',
+        '',
+        '',
+        '',
+        '',
+      ],
       allStyleImgSrc: [
         '',
         ''
