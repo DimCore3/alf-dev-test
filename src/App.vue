@@ -28,7 +28,7 @@ export default defineComponent({
       price: {
         oldPrice: 1500,
         discounts: [
-          20, 36
+          24, 10
         ],
       },
       rating: {

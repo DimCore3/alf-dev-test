@@ -3,7 +3,7 @@
         <h1>{{productData.productName}}</h1>
         <div class="text-regular-small article-number">Арт.{{productData.articleCode}}</div>
         <ReviewAndGradeVue :rating='productData.rating'/>
-        <PriceAndDiscountsVue/>
+        <PriceAndDiscountsVue :oldPrice='productData.price.oldPrice' :discounts='productData.price.discounts' />
         <div class="current-product-description">
             <ChooseSizeVue/>
             <BuyAddToFavorite/>
@@ -29,9 +29,7 @@ export default defineComponent({
     props: {
         productData: {
             type: Object,
-            default: {
-                productName: "Title undefined",
-            }
+            required: true,
         }
     },
 

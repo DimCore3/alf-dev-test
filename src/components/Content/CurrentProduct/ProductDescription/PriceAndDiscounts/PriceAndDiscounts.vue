@@ -1,34 +1,68 @@
 <template>
     <div>
-        PriceAndDiscounts
+        <div class="all-prices">
+            <p class="new-price">{{ newPrice }} ₽</p>
+            <p class="old-price" v-if="newPrice != oldPrice">{{ oldPrice }} ₽</p>
+        </div>
+        <div v-if='getTotalDiscount(discounts) != 0 ' class="show-all-discounts">
+            <p class='show-discount' v-for="discount of discounts">акция -{{discount}}%</p>
+        </div>
     </div>
 </template>
 
 <script lang="ts">
-export default({
+import { defineComponent } from 'vue'
+export default defineComponent({
     props: {
-        discounts: Array,
-        oldPrice: Number,
+        discounts: {
+            type: Array,
+            required: true,
+        },
+        oldPrice: {
+            type: Number,
+            required: true,
+        },
+    },
+
+    setup(props) {
+        props.discounts;
+        props.oldPrice;
     },
 
     data() {
-        let newPrice:number = 0;
         return {
-            newPrice:Number
+            newPrice: 0,
         }
     },
 
-    methods:{
-        getCoastWithDiscounts (){
+    mounted() {
+        this.getCoastWithDiscounts()
+    },
+
+    methods: {
+        getCoastWithDiscounts() {
             try {
-                this.newPrice = this.oldPrice;
-                for (let amount of this.oldPrice) {
-                    this.newPrice = Numbrer(this.newPrice) * (amount / 100)
+                let totalDiscount = this.getTotalDiscount(this.discounts);
+                let discountAmountSum;
+                if (totalDiscount != 0) {
+                    discountAmountSum = Math.round(totalDiscount / 100 * this.oldPrice)
+                    this.newPrice = this.oldPrice - discountAmountSum;
+
+                } else {
+                    this.newPrice = this.oldPrice
                 }
+
             } catch (error) {
-                alert('Error: ', error[0])
-                
-            },
+                alert('Error: ' + error)
+            };
+        },
+
+        getTotalDiscount(arr: number[]) {
+            let TotalDiscountSum =  arr.reduce((a, b) => a + b, 0);
+            if (arr.length > 0 && TotalDiscountSum <= 100) {
+                return TotalDiscountSum
+            };
+            return 0;
         },
     },
 })
@@ -36,4 +70,35 @@ export default({
 
 <style scoped>
 
+.new-price, .old-price {
+    margin: 1rem 0.5rem 1rem 0rem;
+}
+.new-price {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.old-price {
+    color: #828282;
+    text-decoration-line: line-through;
+}
+
+.show-all-discounts, .all-prices {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.show-all-discounts {
+    margin-bottom: 1rem ;
+}
+
+.show-discount {
+    margin-right: 0.5rem;
+    border: 2px #333333 solid;
+    padding: 0.15rem 0.5rem;
+}
 </style>
