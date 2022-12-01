@@ -2,18 +2,18 @@
     <div class="main-header">
         <h3> LOGO </h3>
         <div class='header-icons'>
-            <a href=""><img src="src\assets\person.svg"></a>
-            <a href=""><img src="src\assets\favorite.svg"></a>
-            <a href=""><img src="src\assets\bag.svg"></a>
+            <a href=""><img src="/src/assets/person.svg"></a>
+            <a href=""><img src="/src/assets/favorite.svg"></a>
+            <a href=""><img src="/src/assets/bag.svg"></a>
             <div class="menu-button-is-visible">
                 <button @click="clickMenuButton" class="mobile-menu">
-                    <img src="src\assets\menu.png">
+                    <img src="/src/assets/menu.png">
                 </button>
             </div>
         </div>
         <div @click.stop :class="{'opened-menu': isMenuOpen, 'menu-hidden': !isMenuOpen}">
             <button @click="hideMenu" class="mobile-menu">
-                    <img src="src\assets\exit.png">
+                    <img src="/src/assets/exit.png">
             </button>
             <a href="">постельное белье</a>
             <a href="">одежда для дома</a>
@@ -90,6 +90,7 @@ export default defineComponent({
         button {
             display: flex;
             justify-content: end;
+            margin-right: 3rem;
         }
 
         a {

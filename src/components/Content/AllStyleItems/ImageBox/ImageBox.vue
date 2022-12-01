@@ -2,18 +2,18 @@
         <div class="image-style-box"> 
             <div class="img-hover-info">
                 <div class="take-copy img-hover-icons">
-                    <img src="src\assets\copy.svg" alt="">
+                    <img src="/src/assets/copy.svg" alt="">
                 </div>
                 <div>
-                    <img class="img-hover-icons-bag" src="src\assets\bag.svg" alt="">
+                    <img class="img-hover-icons-bag" src="/src/assets/bag.svg" alt="">
                     <p>Узнай что на мне</p>
                 </div>
                 <div>
-                    <img class="img-hover-icons" src="src\assets\like.png" alt="">
+                    <img class="img-hover-icons" src="/src/assets/like.png" alt="">
                     <p>200</p>
                 </div>
             </div>
-            <img class="contain-img-style" src="src\assets\13986.png" alt="">
+            <img class="contain-img-style" src="/src/assets/13986.png" alt="">
         </div>
 </template>
 

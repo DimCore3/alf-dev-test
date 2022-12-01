@@ -16,7 +16,10 @@ export default ({
     },
 
     props: {
-        productData: Object
+        productData:{
+            type:Object,
+            required: true,
+        }
     },
 
     mounted() {

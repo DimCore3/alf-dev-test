@@ -10,15 +10,15 @@
         </div>
         <div class="description-links">
             <div>
-                <img src="src\assets\Closes.svg">
+                <img src="/src/assets/Closes.svg">
                 <a href="">Описание товара</a>
             </div>    
             <div>
-                <img src="src\assets\clock.svg">
+                <img src="/src/assets/clock.svg">
                 <a href="">Доставка и возврат</a>
             </div>    
             <div>
-                <img src="src\assets\pay.svg">
+                <img src="/src/assets/pay.svg">
                 <a href="">Способы оплаты</a>
             </div>
         </div>

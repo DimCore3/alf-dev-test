@@ -3,8 +3,8 @@
         <p> Отзывы </p>
         <div class="review-stars">
             <div class="star-vote" v-for="rateStar of maxRating">
-                <img v-if="rating.productRate >= rateStar" src="src/assets/filledStar.png">
-                <img v-else src="src/assets/unfiiledStar.png">
+                <img v-if="rating.productRate >= rateStar" src="/src/assets/filledStar.png">
+                <img v-else src="/src/assets/unfiiledStar.png">
             </div>
             <p>
                 {{rating?.commentsCount}} отзывов

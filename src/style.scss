@@ -132,6 +132,10 @@ $full-hight-column: $full-width-column * 1.25;
   }
 }
 
+body {
+  overflow-x:hidden;
+}
+
 p, select, button, h1,h2,h3,h4 .text-regular-small,a  {
   font-family: 'Open Sans';
   font-style: normal;

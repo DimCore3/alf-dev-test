@@ -20,7 +20,10 @@ export default defineComponent({
     },
 
     props: {
-        productData: Object
+        productData:{
+            type:Object,
+            required: true,
+        }
     },
 
 })
