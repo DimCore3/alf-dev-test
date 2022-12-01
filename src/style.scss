@@ -26,6 +26,21 @@ $full-hight-column: $full-width-column * 1.25;
   .product-description {
     width: 700px;    
   }
+  .menu-button-is-visible {
+    display: none;
+  }
+  .all-img-style {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .my-footer-content {
+    margin-top: 6rem;
+    justify-content: space-around;
+  }
+  .left-side-footer {
+    display: contents;
+  }
 }
 
 @media screen and (min-width: 900px) and (max-width:1389px) {
@@ -43,6 +58,21 @@ $full-hight-column: $full-width-column * 1.25;
     width: 40%;
     height: $full-hight-column * 0.8;
   }
+  .menu-button-is-visible {
+    display: none;
+  }
+  .all-img-style {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .my-footer-content {
+    margin-top: 6rem;
+    justify-content: space-around;
+  }
+  .left-side-footer {
+    display: contents;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width:899px) {
@@ -58,7 +88,22 @@ $full-hight-column: $full-width-column * 1.25;
     display: flex;
     flex-direction: column;
     width: 35%;
-    height: 60rem
+    height: 100%;
+  }
+  .menu-button-is-visible {
+    display: none;
+  }
+  .all-img-style {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .my-footer-content {
+    margin-top: 6rem;
+    justify-content: space-around;
+  }
+  .left-side-footer {
+    display: contents;
   }
 }
 
@@ -72,17 +117,26 @@ $full-hight-column: $full-width-column * 1.25;
   .full-product-img {
     min-width: $full-width-column * 0.65;
     min-height: $full-hight-column * 0.85;
-    height: 80%;
   }
   .product-description {
     width: 100%;
   }
+  .my-footer-content {
+    justify-content:flex-start;
+    flex-direction: column;
+  }
+  .left-side-footer {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+  }
 }
 
-p, select, button, h1, .text-regular-small {
+p, select, button, h1,h2,h3,h4 .text-regular-small,a  {
   font-family: 'Open Sans';
   font-style: normal;
   letter-spacing: 0.04em;
+  color: #333333;
 }
 
 .text-regular-small {
@@ -106,4 +160,17 @@ h1 {
 .regular-border {
   color: black;
   border: 1px #333333 solid;
+}
+
+.corner-button {
+  transform: rotate(-90deg);
+}
+
+.corner-button:hover {
+  background-color: rgb(177, 177, 177);
+  cursor: pointer;
+}
+
+hr {
+  border-top: 0.5px solid #C4C4C4;
 }

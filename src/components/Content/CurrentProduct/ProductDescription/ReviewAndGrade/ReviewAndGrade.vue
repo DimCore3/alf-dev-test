@@ -10,7 +10,7 @@
                 {{rating?.commentsCount}} отзывов
             </p>
             <img 
-                class="corner-button-for-comments" 
+                class="corner-button" 
                 src="/src/assets/corner.png"
                 @click="modalInfoBox"    
             >
@@ -62,6 +62,7 @@ export default ({
         flex-wrap: nowrap;
         align-items: baseline;
         gap: 0.5rem;
+        margin-bottom: 1.5rem;
 
         .review-stars {
             display: flex;
@@ -69,13 +70,6 @@ export default ({
             height: 0.7rem;
             align-items: center;
             gap: 0.2rem;
-        }
-        .corner-button-for-comments {
-            transform: rotate(-90deg);
-        }
-        .corner-button-for-comments:hover {
-            background-color: rgb(177, 177, 177);
-            cursor: pointer;
         }
     }
 </style>

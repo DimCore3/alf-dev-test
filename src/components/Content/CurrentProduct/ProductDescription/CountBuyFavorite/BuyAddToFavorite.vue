@@ -1,12 +1,15 @@
 <template>
-    <div class="counter-cart-favorite">
-        <counterVue/>
-        <div class="cart-and-favorite">
-            <add-to-cart-button/>
-            <add-to-favorites-button/>
+    <div class="all-box-counter-cart-favorite">
+        <div class="counter-cart-favorite">
+            <counterVue/>
+            <div class="cart-and-favorite">
+                <add-to-cart-button/>
+                <add-to-favorites-button/>
+            </div>
         </div>
+        <a href="">Купить в 1 клик</a>
+        <hr>
     </div>
-
 </template>
 
 <script lang="ts">
@@ -18,10 +21,12 @@ export default ({
 </script>
 
 <style scoped lang="scss">
-    .counter-cart-favorite {
-        height: 3rem;
-        gap: 0.5rem;
+    .all-box-counter-cart-favorite {
         margin: 1rem 0rem;
+        line-height: 3rem;
+    }
+    .counter-cart-favorite {
+        gap: 0.5rem;
     }
     .cart-and-favorite {
         display: flex;

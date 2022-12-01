@@ -27,5 +27,7 @@ export default ({
 </script>
 
 <style scoped>
-
+ .full-product-info {
+    margin-top: 1rem;
+ }
 </style>

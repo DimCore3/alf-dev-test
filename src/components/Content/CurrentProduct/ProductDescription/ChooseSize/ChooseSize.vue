@@ -1,8 +1,11 @@
 <template>
-    <select name="chooseSize" id="chooseSize" class="choose-size regular-border" placeholder="Выбрать размер">
-        <option selected disabled>Выбрать размер</option>
-        <option v-for="size of sizeList" value="123">{{size}}</option>
-    </select>
+    <div class="size-box">
+        <select name="chooseSize" id="chooseSize" class="choose-size regular-border" placeholder="Выбрать размер">
+            <option selected disabled>Выбрать размер</option>
+            <option v-for="size of sizeList" value="123">{{size}}</option>
+        </select>
+        <a href="./">Определить размер</a>
+    </div>
 </template>
 
 <script lang="ts">
@@ -16,6 +19,10 @@ export default defineComponent({
 </script>
 
 <style scoped>
+    .size-box {
+        display: flex;
+        flex-direction: column;
+    }
     .choose-size {
         max-width: 315px;
         width: 60%;

@@ -8,6 +8,20 @@
             <ChooseSizeVue/>
             <BuyAddToFavorite/>
         </div>
+        <div class="description-links">
+            <div>
+                <img src="src\assets\Closes.svg">
+                <a href="">Описание товара</a>
+            </div>    
+            <div>
+                <img src="src\assets\clock.svg">
+                <a href="">Доставка и возврат</a>
+            </div>    
+            <div>
+                <img src="src\assets\pay.svg">
+                <a href="">Способы оплаты</a>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -44,7 +58,18 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.description-links {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+}
+
 h1 {
     color: #333333;
     line-height: 20px;

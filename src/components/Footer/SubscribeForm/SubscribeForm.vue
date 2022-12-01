@@ -1,6 +1,13 @@
 <template>
-    <div>
-
+    <div class="right-side-footer">
+        <h3>Узнайте первыми о новинках и акциях</h3>
+        <form action="">
+            <input type="email" name='emailSub' id="emailSub" placeholder="Адрес электронной почты">
+            <hr>
+            <div>
+                <button for='emailSub' class="regular-border subs-email-button">Подписаться</button>
+            </div>
+        </form>
     </div>
 </template>
 
@@ -8,14 +15,33 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-    setup () {
-        
+    setup() {
+
 
         return {}
     }
 })
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+    .right-side-footer {
+        
+        h3 {
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        input {
+            width: 100%;
+            line-height: 2rem;
+        }
+        .subs-email-button {
+            padding: 0.5rem 2rem;
+            margin: 2rem 0;
+            
+        }
+        div {
+            position: relative;
+            left: 60%;
+        }
+    }
 </style>
