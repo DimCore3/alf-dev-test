@@ -32,6 +32,7 @@ $full-hight-column: $full-width-column * 1.25;
   .all-img-style {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
   }
   .my-footer-content {
@@ -40,6 +41,19 @@ $full-hight-column: $full-width-column * 1.25;
   }
   .left-side-footer {
     display: contents;
+  }
+  .large-img-test, .small-boxes-style {
+    width: 700px;
+    height: 41rem;
+  }
+  .img-column {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .small-img-test {
+    width: 100%;
+    height: 20rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -73,6 +87,19 @@ $full-hight-column: $full-width-column * 1.25;
   .left-side-footer {
     display: contents;
   }
+  .large-img-test, .small-boxes-style {
+    width: 50%;
+    height: 27rem;
+  }
+  .img-column {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .small-img-test {
+    width: 100%;
+    height: 13rem;
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width:899px) {
@@ -105,6 +132,19 @@ $full-hight-column: $full-width-column * 1.25;
   .left-side-footer {
     display: contents;
   }
+  .large-img-test, .small-boxes-style {
+    width: 50%;
+    height: 25rem;
+  }
+  .img-column {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .small-img-test {
+    width: 100%;
+    height: 12rem;
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (max-width: 699px) {
@@ -129,6 +169,26 @@ $full-hight-column: $full-width-column * 1.25;
     display: flex;
     justify-content: space-around;
     margin: 2rem;
+  }
+  .all-img-style {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .large-img-test, .small-boxes-style {
+    width: 100%;
+    height: 30rem;
+    margin-bottom: 1rem;
+  }
+  .img-column {
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .small-img-test {
+    width: 100%;
+    height: 15rem;
+    margin-bottom: 1rem;
   }
 }
 
