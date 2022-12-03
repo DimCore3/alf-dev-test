@@ -41,9 +41,6 @@ export default defineComponent({
             margin-top: 0.3rem
         }
     }
-    // .add-to-favorite-button:hover {
-    //     background-color:rgba(33,33,33,0.8); 
-    // }
     .add-to-favorite-button:active {
         padding: 1rem;
         border-top-right-radius: 90%;

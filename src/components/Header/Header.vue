@@ -6,18 +6,12 @@
             <a class='header-button-ico' href=""><img src="/src/assets/favorite.svg"></a>
             <a class='header-button-ico' href=""><img src="/src/assets/bag.svg"></a>
             <div class="mobile-menu-button header-button-ico">
-                <button 
-                    @click="clickMenuButton" 
-                    class="mobile-menu"    
-                >
+                <button @click="clickMenuButton" class="mobile-menu">
                     <img src="/src/assets/menu.png">
                 </button>
             </div>
         </div>
-        <div 
-            @click.stop 
-            :class="{ 'opened-menu': isMenuOpen, 'menu-hidden': !isMenuOpen }"
-        >
+        <div @click.stop :class="{ 'opened-menu': isMenuOpen, 'menu-hidden': !isMenuOpen }">
             <button @click="hideMenu" class="mobile-menu">
                 <img src="/src/assets/exit.png">
             </button>
@@ -69,24 +63,10 @@ export default defineComponent({
         height: 24px;
     }
 
-    .header-button-ico {
-        display: flex;
-        align-items: center;
-        img {
-            width: 100%;
-            height: 100%;
-        };
-    }
-
-    .header-button-ico:hover {
-        background-color: rgba($color: #515151, $alpha: 0.1);
-        border-radius: 45%;
-    }
-    .header-button-ico:active {
-        background-color: rgba($color: #515151, $alpha: 0.3);
-        border-radius: 45%;
-        padding: 3px;
-    }
+    .header-button-ico img {
+        width: 100%;
+        height: 100%;
+    };
 
     button {
         background-color: white;
@@ -120,6 +100,7 @@ export default defineComponent({
             justify-content: end;
             margin-right: 3rem;
         }
+
         a {
             text-decoration: none;
             color: #333333;
