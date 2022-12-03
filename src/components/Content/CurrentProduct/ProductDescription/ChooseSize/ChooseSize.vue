@@ -2,7 +2,7 @@
     <div class="size-box">
         <select name="chooseSize" id="chooseSize" class="choose-size regular-border" placeholder="Выбрать размер">
             <option selected disabled>Выбрать размер</option>
-            <option v-for="size of sizeList" value="123">{{size}}</option>
+            <option v-for="size of sizeList.sort()" value="123">{{size}}</option>
         </select>
         <a href="./">Определить размер</a>
     </div>
