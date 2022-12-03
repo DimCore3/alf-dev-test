@@ -45,7 +45,6 @@ export default({
         display: flex;
         flex-direction: column;
     }
-
     .full-product-img {
         background-clip: border-box;
         background-repeat: no-repeat;

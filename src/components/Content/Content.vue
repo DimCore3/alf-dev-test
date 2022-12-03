@@ -1,6 +1,6 @@
 <template>
     <Product :productData='productData'/>
-    <AllStyleItemsVue :productData='productData'/>
+    <AllStyleItemsVue :otherProducts='productData.otherProducts'/>
 </template>
 
 <script lang="ts">

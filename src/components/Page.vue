@@ -1,9 +1,11 @@
 <template>
-    <HeaderVue/>
-    <div>
-        <ContentVue :productData='productData'/>
+    <div class="full-page-content">
+        <HeaderVue/>
+        <div>
+            <ContentVue :productData='productData'/>
+        </div>
+        <FooterVue/>
     </div>
-    <FooterVue/>
 </template>
 
 <script lang="ts">

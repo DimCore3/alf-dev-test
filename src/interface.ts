@@ -1,3 +1,9 @@
+interface additionalProductType {
+  imgSrc: string,
+  link: string,
+  likesNum: number,
+};
+
 export default interface ProductDataInterface {
     productName: string,
     articleCode: string,
@@ -11,5 +17,5 @@ export default interface ProductDataInterface {
       productRate: number,
     }
     allImgSrc:string[],
-    allStyleImgSrc: string[],
+    otherProducts:additionalProductType[],
   }

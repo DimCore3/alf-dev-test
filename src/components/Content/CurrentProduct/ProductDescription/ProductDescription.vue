@@ -5,7 +5,7 @@
         <ReviewAndGradeVue :rating='productData.rating'/>
         <PriceAndDiscountsVue :oldPrice='productData.price.oldPrice' :discounts='productData.price.discounts' />
         <div class="current-product-description">
-            <ChooseSizeVue/>
+            <ChooseSizeVue :sizeList="productData.sizeList"/>
             <BuyAddToFavorite/>
         </div>
         <div class="description-links">
@@ -52,9 +52,6 @@ export default defineComponent({
             
         }
     },
-    mounted() {
-        console.log(this.productData.rating)
-    }
 })
 </script>
 
@@ -79,9 +76,8 @@ h1 {
     color: #828282;
 }
 .product-description {
-    margin: 2rem;
+    margin: 30px;
     line-height: 4rem;
-    padding: 0.5rem;
 }
 .article-number {
     margin-bottom: 1rem;

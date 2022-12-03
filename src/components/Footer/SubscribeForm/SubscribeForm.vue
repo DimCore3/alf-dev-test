@@ -27,17 +27,20 @@ export default defineComponent({
     .right-side-footer {
         
         h3 {
-            margin-bottom: 1rem;
+            margin: 1rem 1rem;
             text-transform: uppercase;
         }
         input {
             width: 100%;
             line-height: 2rem;
+            margin: 1rem 1rem;
         }
         .subs-email-button {
             padding: 0.5rem 2rem;
             margin: 2rem 0;
-            
+        }
+        hr {
+            margin: 0rem 1rem;
         }
         div {
             position: relative;

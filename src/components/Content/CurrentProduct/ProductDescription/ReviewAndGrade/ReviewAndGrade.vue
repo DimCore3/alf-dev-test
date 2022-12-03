@@ -42,11 +42,6 @@ export default ({
             maxRating: 5,
         }
     },
-    
-    beforeMount() {
-        console.log(this.rating.commentsCount)
-    },
-
     methods: {
         modalInfoBox() {
             alert('Тут будет модальное окно или страница')

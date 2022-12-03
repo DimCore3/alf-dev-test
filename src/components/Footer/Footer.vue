@@ -26,7 +26,6 @@ export default defineComponent({
 <style scoped lang="scss">
 .my-footer-content {
     height: 15rem;
-    width: 100%;
     display: flex;
 }
 

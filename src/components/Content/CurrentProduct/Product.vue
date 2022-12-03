@@ -14,18 +14,12 @@ export default ({
         ProductImagePanelVue,
         ProductDescriptionVue
     },
-
     props: {
         productData:{
             type:Object,
             required: true,
         }
     },
-
-    mounted() {
-        console.log(this.productData)
-    }
-
 })
 </script>
 

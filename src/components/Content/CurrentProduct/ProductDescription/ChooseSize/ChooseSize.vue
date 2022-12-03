@@ -9,16 +9,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
     props: {
-        sizeList:Array,
-    }
-})
+        sizeList: {
+            type: Object as PropType<number[]>,
+            required: true,
+        }
+    },
+});
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .size-box {
         display: flex;
         flex-direction: column;
@@ -30,5 +33,6 @@ export default defineComponent({
         appearance: none;
         background: url(/src/assets/corner.png) no-repeat right;
         padding: 0 0.5rem;
+        background-position: 96%;
     }
 </style>

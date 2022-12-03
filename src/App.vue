@@ -36,16 +36,39 @@ export default defineComponent({
         productRate: 4,
       },
       allImgSrc: [
-        'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/139867.png?raw=true',
-        'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/1229678.png?raw=true',
-        'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/13986.png?raw=true',
-        'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/1229678.png?raw=true',
-        'https://github.com/DimCore3/alf-dev-test/blob/main/src/assets/13986.png?raw=true',
+        './main-photos/main1.png',
+        './main-photos/main2.png',
+        './main-photos/main3.png',
+        './main-photos/main4.png',
+        './main-photos/main5.png',
       ],
-      allStyleImgSrc: [
-        '',
-        ''
-      ], 
+      otherProducts: [
+        {
+          imgSrc: './product-styles-images/1.png',
+          link: './abc',
+          likesNum: 100,
+        },
+        {
+          imgSrc: './product-styles-images/2.png',
+          link: './aaa',
+          likesNum: 23,
+        },
+        {
+          imgSrc: './product-styles-images/3.png',
+          link: './are',
+          likesNum: 10,
+        },
+        {
+          imgSrc: './product-styles-images/4.png',
+          link: './rrrr',
+          likesNum: 421,
+        },
+        {
+          imgSrc: './product-styles-images/5.png',
+          link: './llaa',
+          likesNum: 67,
+        },
+      ],
     }
 
     return {
