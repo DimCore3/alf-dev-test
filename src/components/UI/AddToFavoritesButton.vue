@@ -33,13 +33,22 @@ export default defineComponent({
         width: 44px;
         height: 44px;
         background: #333333;
+        transition: 0.4s linear;
+
         img {
-            width: 15px;
-            height: 15px;
+            width: 16px;
+            height: 16px;
+            margin-top: 0.3rem
         }
     }
-    .add-to-favorite-button:hover {
-        background-color:rgba(33,33,33,0.8);
+    // .add-to-favorite-button:hover {
+    //     background-color:rgba(33,33,33,0.8); 
+    // }
+    .add-to-favorite-button:active {
+        padding: 1rem;
+        border-top-right-radius: 90%;
+        transition: 0.4s linear;
     }
+
 
 </style>

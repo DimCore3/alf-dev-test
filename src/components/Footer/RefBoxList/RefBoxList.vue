@@ -57,5 +57,10 @@ export default defineComponent({
     a {
         text-decoration: none;
     }
+
+    a:hover {
+        color: #919191;
+        transition: 0.15s linear;
+    }
 }
 </style>

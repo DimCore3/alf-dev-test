@@ -33,7 +33,7 @@ export default defineComponent({
         input {
             width: 100%;
             line-height: 2rem;
-            margin: 1rem 1rem;
+            margin: 0rem 1rem
         }
         .subs-email-button {
             padding: 0.5rem 2rem;
@@ -45,6 +45,10 @@ export default defineComponent({
         div {
             position: relative;
             left: 60%;
+        }
+        button:hover {
+            background-color: #E1E1E1;
+            transition: 0.1s linear;
         }
     }
 </style>

@@ -95,6 +95,7 @@ export default defineComponent({
     flex-direction: column;
     align-items: center;
     width: 100%;
+    
     .show-all-styles {
         margin: 2rem 0 2rem 0;
     }

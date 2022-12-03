@@ -67,7 +67,6 @@ export default defineComponent({
         flex-direction: column;
         background-color: rgba($color: #000000, $alpha: 0.4);
         height: 100%;
-
         .take-copy {
             align-self: end;
             z-index: 30;

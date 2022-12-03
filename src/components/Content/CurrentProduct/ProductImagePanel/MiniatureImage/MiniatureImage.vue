@@ -24,7 +24,7 @@ export default ({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .mini-img-block {
         width: 70px;
         height: 91px;
@@ -33,11 +33,13 @@ export default ({
     }
 
     .mini-img-block:hover {        
-        filter: brightness(80%)
+        filter: brightness(80%);
+        transition: 0.05s linear;
     }
 
     .img-is-not-active {
-        filter: brightness(50%)
+        filter: brightness(50%);
+        transition: 0.05s linear;
     }
 
     img {

@@ -34,5 +34,6 @@ export default defineComponent({
         background: url(/src/assets/corner.png) no-repeat right;
         padding: 0 0.5rem;
         background-position: 96%;
+        transition: 0.5s linear;
     }
 </style>
