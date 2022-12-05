@@ -1,8 +1,10 @@
 <template>
     <div class="full-page-content">
-        <HeaderVue/>
+        <HeaderVue 
+            v-myScroll="handleScroll"
+        />
         <div>
-            <ContentVue :productData='productData'/>
+            <ContentVue :productData='productData' />
         </div>
         <FooterVue/>
     </div>
@@ -21,13 +23,30 @@ export default defineComponent({
         FooterVue,
     },
 
+    directives: {
+        myScroll: {
+            mounted(el, binding) {
+                window.addEventListener('scroll', () => {
+                    binding.value(el)
+                })
+            }
+        }
+    },
     props: {
-        productData:{
-            type:Object,
+        productData: {
+            type: Object,
             required: true,
         }
     },
 
+    methods: {
+        handleScroll: (el: Element) => {
+            el.setAttribute(
+                'style',
+                'opacity:' + (1 - (window.scrollY / 20))
+            )
+        }   
+    }
 })
 </script>
 

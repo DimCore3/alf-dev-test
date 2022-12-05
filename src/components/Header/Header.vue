@@ -1,4 +1,5 @@
 <template>
+<div>
     <div class="main-header">
         <h3> LOGO </h3>
         <div class='header-icons'>
@@ -22,6 +23,7 @@
         </div>
     </div>
     <hr>
+</div>
 </template>
 
 <script lang="ts">
@@ -75,6 +77,8 @@ export default defineComponent({
 
     a:active {
         background-color: rgba($color: #000000, $alpha: .4);
+        border-radius: 90px;
+        transition: 0.2s linear;
     }
 
     .menu-hidden {
