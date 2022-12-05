@@ -26,7 +26,10 @@ export default ({
                 this.count--
             }
         },
-    }
+    },
+    updated() {
+        this.$emit('update:amountUpdated',this.count);
+    },
 })
 </script>
 

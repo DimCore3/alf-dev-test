@@ -1,4 +1,5 @@
 <template>
+    <my-notification :text="notificationText" :isShow="isShowNotif"/>
     <button @click="clickToButton()" class="add-to-favorite-button">
         <img :src="img" alt="">
     </button>
@@ -10,18 +11,24 @@ import dislikeImg from '../../assets/dislike.png'
 import likeImg from '../../assets/like.png'
 
 export default defineComponent({
-    name:'add-to-favorites-button',
+    name: "add-to-favorites-button",
     data() {
         return {
             isLiked: false,
-            img:dislikeImg,
-        }
+            img: dislikeImg,
+            notificationText: '',
+            isShowNotif: false,
+        };
     },
-
     methods: {
         clickToButton() {
             this.isLiked = !this.isLiked;
-            this.img = this.isLiked ? likeImg : dislikeImg ;
+            this.img = this.isLiked ? likeImg : dislikeImg;
+            this.notificationText = this.isLiked ? 'Товар добавлен в избранное' : 'Товар удален из избранных';
+            this.isShowNotif = true;
+            setTimeout(()=> {
+                this.isShowNotif = false;
+            }, 2000)
         },
     }
 })

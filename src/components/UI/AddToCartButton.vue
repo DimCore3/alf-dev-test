@@ -1,16 +1,41 @@
 <template>
-    <button @click="click" class="ui-pay-button">
-        <p>Добавить в корзину</p>
-    </button>
+    <div>
+        <my-notification 
+            :text="'Товар `' + productName + '` в количестве ' + counterAmount + ' единиц добавлен в корзину'" 
+            :isShow="isShowNotif"
+        />
+        <button @click="click" class="ui-pay-button">
+            <p>Добавить в корзину</p>
+        </button>
+    </div>
 </template>
 
 <script lang="ts">
 export default ({
     name: 'add-to-cart-button',
 
+    props: {
+        counterAmount: {
+            type: Number,
+            required: true,
+            default: 0,
+        },
+        productName: {
+            type: String,
+            required: true,
+        }
+    },
+    data() {
+        return {
+            isShowNotif: false,
+        };
+    },
     methods: {
         click() {
-            alert('Click!')
+            this.isShowNotif = true;
+            setTimeout(()=> {
+                this.isShowNotif = false;
+            }, 2000)
         }
     }
 })

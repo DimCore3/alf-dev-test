@@ -6,7 +6,7 @@
         <PriceAndDiscountsVue :oldPrice='productData.price.oldPrice' :discounts='productData.price.discounts' />
         <div class="current-product-description">
             <ChooseSizeVue :sizeList="productData.sizeList"/>
-            <BuyAddToFavorite/>
+            <BuyAddToFavorite :productName="productData.productName"/>
         </div>
         <div class="description-links">
             <div>

@@ -1,9 +1,13 @@
 <template>
     <div class="all-box-counter-cart-favorite">
         <div class="counter-cart-favorite">
-            <counterVue/>
+            <counterVue v-model:amountUpdated="cartAmount" />
             <div class="cart-and-favorite">
-                <add-to-cart-button/>
+                <add-to-cart-button
+                    :productName="productName"
+                    :counterAmount="cartAmount"
+                    @click=""
+                />
                 <add-to-favorites-button/>
             </div>
         </div>
@@ -14,9 +18,19 @@
 
 <script lang="ts">
 import counterVue from './Counter.vue'
-
 export default ({
     components: { counterVue },
+    props: {
+        productName: {
+            type: String,
+            required: true,
+        }
+    },
+    data() {
+        return {
+            cartAmount:0,
+        }
+    },
 })
 </script>
 
