@@ -1,29 +1,29 @@
 <template>
-<div>
-    <div class="main-header">
-        <h3> LOGO </h3>
-        <div class='header-icons'>
-            <a class='header-button-ico' href=""><img src="/src/assets/person.svg"></a>
-            <a class='header-button-ico' href=""><img src="/src/assets/favorite.svg"></a>
-            <a class='header-button-ico' href=""><img src="/src/assets/bag.svg"></a>
-            <div class="mobile-menu-button header-button-ico">
-                <button @click="clickMenuButton" class="mobile-menu">
-                    <img src="/src/assets/menu.png">
+    <div>
+        <div class="main-header">
+            <h3> LOGO </h3>
+            <div class='header-icons'>
+                <a class='header-button-ico' href=""><img src="/src/assets/person.svg"></a>
+                <a class='header-button-ico' href=""><img src="/src/assets/favorite.svg"></a>
+                <a class='header-button-ico' href=""><img src="/src/assets/bag.svg"></a>
+                <div class="mobile-menu-button header-button-ico">
+                    <button @click="clickMenuButton" class="mobile-menu">
+                        <img src="/src/assets/menu.png">
+                    </button>
+                </div>
+            </div>
+            <div @click.stop :class="{ 'opened-menu': isMenuOpen, 'menu-hidden': !isMenuOpen }">
+                <button @click="hideMenu" class="mobile-menu">
+                    <img src="/src/assets/exit.png">
                 </button>
+                <a href="">постельное белье</a>
+                <a href="">одежда для дома</a>
+                <a href="">Одежда для улицы</a>
+                <a href="">Выход</a>
             </div>
         </div>
-        <div @click.stop :class="{ 'opened-menu': isMenuOpen, 'menu-hidden': !isMenuOpen }">
-            <button @click="hideMenu" class="mobile-menu">
-                <img src="/src/assets/exit.png">
-            </button>
-            <a href="">постельное белье</a>
-            <a href="">одежда для дома</a>
-            <a href="">Одежда для улицы</a>
-            <a href="">Выход</a>
-        </div>
+        <hr>
     </div>
-    <hr>
-</div>
 </template>
 
 <script lang="ts">
@@ -68,7 +68,9 @@ export default defineComponent({
     .header-button-ico img {
         width: 100%;
         height: 100%;
-    };
+    }
+
+    ;
 
     button {
         background-color: white;

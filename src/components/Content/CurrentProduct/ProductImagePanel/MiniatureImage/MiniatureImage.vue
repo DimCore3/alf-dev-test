@@ -2,7 +2,7 @@
     <div 
         @click="activate()" 
         class='mini-img-block' :class="{'img-is-not-active':!isActive}"
-        :style="{ 'background-image' : 'url(\'' + picture + '\')' }"
+        v-bind:style="{ backgroundImage: 'url(' + picture + ')' }"
     >
     </div>
 </template>
