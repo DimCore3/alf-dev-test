@@ -3,17 +3,17 @@
         <div class="for-client-footer">
             <h3>покупателям</h3>
             <div>
-                <a href="">Каталог</a>
-                <a href="">Акции</a>
-                <a href="">Бренды</a>
+                <p>Каталог</p>
+                <p>Акции</p>
+                <p>Бренды</p>
             </div>
         </div>
         <div class="about-us-footer">
             <h3>О нас</h3>
             <div>
-                <a href="">О компании</a>
-                <a href="">Новости</a>
-                <a href="">Команда</a>
+                <p>О компании</p>
+                <p>Новости</p>
+                <p>Команда</p>
             </div>
         </div>
     </div>
@@ -34,7 +34,6 @@ export default defineComponent({
 <style scoped lang="scss">
 .left-side-footer {
     line-height: 2rem;
-
     .for-client-footer {
         div {
             display: flex;
@@ -53,7 +52,7 @@ export default defineComponent({
         margin-bottom: 1rem;
         text-transform: uppercase;
     }
-    
+
     a {
         text-decoration: none;
     }

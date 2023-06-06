@@ -1,5 +1,5 @@
 <template>
-    <a class="img-hover-info" :href="link">
+    <div class="img-hover-info" >
         <div 
             class="take-copy img-hover-icons"
             @click="copyUrl" 
@@ -14,7 +14,7 @@
             <img class="img-hover-icons" src="/src/assets/like.png" alt="">
             <p>{{likesNum}}</p>
         </div>
-    </a>
+    </div>
 </template>
 
 <script lang="ts">

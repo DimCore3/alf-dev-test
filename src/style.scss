@@ -5,6 +5,10 @@
   margin: 0px;
 }
 
+a {
+  pointer-events: none;
+}
+
 $full-width-column: 684px;
 $full-hight-column: $full-width-column * 1.25;
 
